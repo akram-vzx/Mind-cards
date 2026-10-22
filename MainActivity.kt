@@ -9,6 +9,7 @@ import com.google.android.material.color.MaterialColors
 import com.mindcards.app.adapters.TabsPagerAdapter
 import com.mindcards.app.data.AppRepository
 import com.mindcards.app.databinding.ActivityMainBinding
+import com.mindcards.app.util.GameReloadSignal
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         Locale.setDefault(loc)
         val cfg = Configuration(newBase.resources.configuration)
         cfg.setLocale(loc)
-        cfg.setLayoutDirection(loc)
         super.attachBaseContext(newBase.createConfigurationContext(cfg))
     }
 
@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewPager.adapter = TabsPagerAdapter(this)
         binding.viewPager.offscreenPageLimit = 3
-        binding.viewPager.setCurrentItem(1, false)
 
         binding.navCards.setOnClickListener { binding.viewPager.setCurrentItem(0, true) }
         binding.navGame.setOnClickListener { binding.viewPager.setCurrentItem(1, true) }
@@ -41,12 +40,18 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.registerOnPageChangeCallback(
             object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
-                    updateTitle(position)
-                    updateNav(position)
+                    updateTitle(position); updateNav(position)
                 }
             }
         )
-        updateTitle(1); updateNav(1)
+        val initial = savedInstanceState?.getInt("tab", 1) ?: 1
+        binding.viewPager.setCurrentItem(initial, false)
+        updateTitle(initial); updateNav(initial)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("tab", binding.viewPager.currentItem)
     }
 
     private fun updateTitle(pos: Int) {
@@ -62,14 +67,15 @@ class MainActivity : AppCompatActivity() {
             com.google.android.material.R.attr.colorPrimary)
         val inactive = MaterialColors.getColor(binding.root,
             com.google.android.material.R.attr.colorOnSurfaceVariant)
-        binding.navCards.setTextColor(if (pos == 0) active else inactive)
-        binding.navGame.setTextColor(if (pos == 1) active else inactive)
-        binding.navSettings.setTextColor(if (pos == 2) active else inactive)
+        binding.navCardsLabel.setTextColor(if (pos == 0) active else inactive)
+        binding.navGameLabel.setTextColor(if (pos == 1) active else inactive)
+        binding.navSettingsLabel.setTextColor(if (pos == 2) active else inactive)
     }
 
-    fun refreshTitle() = updateTitle(binding.viewPager.currentItem)
     fun goToCardsTab() = binding.viewPager.setCurrentItem(0, true)
+
     fun goToGameTab() {
+        GameReloadSignal.fire()
         binding.viewPager.setCurrentItem(1, true)
         updateTitle(1)
     }
