@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mind Cards</string>
+    <string name="tab_game">Game</string>
+    <string name="tab_cards">Card Sets</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="skip_next">Next Question →</string>
+    <string name="completed_title">Card set completed!</string>
+    <string name="completed_message">%1$d correct out of %2$d (accuracy %3$d%%)</string>
+    <string name="restart_set">Restart from scratch</string>
+    <string name="other_sets">Choose another set</string>
+    <string name="no_set_selected">No card set selected.\nGo to the Card Sets tab to pick one.</string>
+
+    <string name="import_set">Import Set</string>
+    <string name="empty_cards">No card sets yet.\nTap the import button to add a TXT file.</string>
+    <string name="import_success">Card set imported successfully</string>
+    <string name="import_failed">Import failed. Please check the file format.</string>
+
+    <string name="reset_progress">Reset Progress</string>
+    <string name="reset_progress_confirm">Reset progress of \"%1$s\" to zero?</string>
+
+    <string name="start_over_title">Start over?</string>
+    <string name="start_over_message">You have completed 100%% of this set. Start over from the beginning?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="stats_global">Global Stats</string>
+    <string name="stats_per_set">Stats per Set</string>
+    <string name="answered">Answered</string>
+    <string name="correct_count">Correct</string>
+    <string name="wrong_count">Wrong</string>
+    <string name="accuracy">Accuracy</string>
+
+    <string name="appearance">Appearance</string>
+    <string name="theme_color">Theme color</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="language">Language</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_en">English</string>
+
+    <string name="set_progress_format">Progress: %1$d of %2$d</string>
+    <string name="set_accuracy_format">%1$d correct · %2$d wrong · %3$d%%</string>
+    <string name="set_stat_format">%1$d/%2$d · %3$d%%</string>
+</resources>
