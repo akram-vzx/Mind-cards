@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mind Cards</string>
+    <string name="tab_game">اللعبة</string>
+    <string name="tab_cards">الأوراق</string>
+    <string name="tab_settings">الإعدادات</string>
+
+    <string name="skip_next">السؤال التالي ←</string>
+    <string name="completed_title">أكملت المجموعة!</string>
+    <string name="completed_message">%1$d صحيحة من %2$d (دقة %3$d%%)</string>
+    <string name="restart_set">إعادة من البداية</string>
+    <string name="other_sets">مجموعة أخرى</string>
+    <string name="no_set_selected">لا توجد مجموعة مختارة.\nاذهب إلى صفحة الأوراق لاختيار واحدة.</string>
+
+    <string name="import_set">استيراد مجموعة</string>
+    <string name="empty_cards">لا توجد مجموعات بعد.\nاضغط زر الاستيراد لإضافة ملف TXT.</string>
+    <string name="import_success">تم استيراد المجموعة بنجاح</string>
+    <string name="import_failed">فشل استيراد الملف. تأكد من الصيغة الصحيحة.</string>
+
+    <string name="reset_progress">إعادة التقدم</string>
+    <string name="reset_progress_confirm">هل تريد إعادة تقدم مجموعة \"%1$s\" إلى الصفر؟</string>
+
+    <string name="start_over_title">إعادة من البداية؟</string>
+    <string name="start_over_message">أكملت هذه المجموعة 100%%. هل تريد البدء من جديد؟</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="stats_global">إحصائيات عامة</string>
+    <string name="stats_per_set">إحصائيات كل مجموعة</string>
+    <string name="answered">تمت الإجابة</string>
+    <string name="correct_count">صحيحة</string>
+    <string name="wrong_count">خاطئة</string>
+    <string name="accuracy">الدقة</string>
+
+    <string name="appearance">المظهر</string>
+    <string name="theme_color">لون الواجهة</string>
+    <string name="dark_mode">الوضع المظلم</string>
+    <string name="language">اللغة</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_en">English</string>
+
+    <string name="set_progress_format">تمت الإجابة: %1$d من %2$d</string>
+    <string name="set_accuracy_format">%1$d صحيحة · %2$d خاطئة · دقة %3$d%%</string>
+    <string name="set_stat_format">%1$d/%2$d سؤال · دقة %3$d%%</string>
+</resources>
