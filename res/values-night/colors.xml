@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_primary">#B5C4FF</color>
+    <color name="blue_on_primary">#1A2E5E</color>
+    <color name="blue_primary_container">#324478</color>
+    <color name="blue_on_primary_container">#DAE1FF</color>
+
+    <color name="purple_primary">#CFBCFF</color>
+    <color name="purple_on_primary">#381E72</color>
+    <color name="purple_primary_container">#4F378A</color>
+    <color name="purple_on_primary_container">#EADDFF</color>
+
+    <color name="green_primary">#9DD67D</color>
+    <color name="green_on_primary">#0F3900</color>
+    <color name="green_primary_container">#215107</color>
+    <color name="green_on_primary_container">#B8F397</color>
+
+    <color name="teal_primary">#4DDADA</color>
+    <color name="teal_on_primary">#003737</color>
+    <color name="teal_primary_container">#004F4F</color>
+    <color name="teal_on_primary_container">#6FF7F6</color>
+
+    <color name="orange_primary">#FFB870</color>
+    <color name="orange_on_primary">#4A2800</color>
+    <color name="orange_primary_container">#693C00</color>
+    <color name="orange_on_primary_container">#FFDCBE</color>
+
+    <color name="pink_primary">#FFB0C9</color>
+    <color name="pink_on_primary">#5E1133</color>
+    <color name="pink_primary_container">#7B284A</color>
+    <color name="pink_on_primary_container">#FFD9E2</color>
+</resources>
